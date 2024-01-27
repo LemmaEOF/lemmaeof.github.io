@@ -1,0 +1,232 @@
+@import url('https://fonts.cdnfonts.com/css/janitor');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: #212121;
+		--text-color: #EBEBEB;
+		--accent: #44CF6C;
+		--outline: #5FEC94;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: #EBEBEB;
+		--text-color: #212121;
+		--accent: #5FEC94;
+		--outline: #44CF6C;
+	}
+}
+
+body {
+	font-family: "Lato", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif;
+	font-size: 100%;
+	line-height: 1.35rem;
+	margin: 0;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+header {
+    background-color: var(--accent);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+	min-height: 6rem;
+}
+
+h1 {
+	font-size: xx-large;
+	margin: 1rem;
+	font-family: "Janitor", cursive;
+}
+
+h2 {
+	margin: 1rem;
+	font-family: "Janitor", cursive;
+}
+
+nav.main-nav ul {
+	width: 25vw;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+	border: 1px solid var(--bg-color);
+	border-radius: .6rem;
+	background-color: var(--bg-color);
+	padding: .2rem .8rem;
+}
+
+.main-nav li:hover {
+	background-color: var(--text-color);
+	color: var(--bg-color);
+}
+
+.main-nav a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+main {
+	text-align: center;
+	font-size: large;
+}
+
+section.flexible {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+section.flexible div {
+	width: 45%;
+}
+
+section.flexible figure {
+	display: flex;
+	height: 325px;
+	flex-direction: column;
+	justify-content: space-between;
+	background: var(--accent);
+	border: 3px solid var(--accent);
+	/* border-radius: 10%; */
+	color: var(--bg-color);
+}
+
+figure img {
+	width: 450px;
+}
+
+main h3 {
+	font-size: x-large;
+}
+
+main p { /*TODO: weird positioning on comms page*/
+	max-width: 80vw;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p.disclaimer {
+	width: auto;
+}
+
+ul.comminfo {
+	list-style: "- " inside;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 0;
+	padding: 0;
+}
+
+ul.subpoint {
+	font-size: 75%;
+	color: var(--outline);
+	margin: 0;
+	padding: 0;
+}
+
+span.keyword {
+	font-weight: bold;
+	color: var(--outline);
+}
+
+section.links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+div.headerimg {
+	/*width: calc(80vw + 16px);*/
+	width: 80%;
+	height: 20vw;
+	background-image: url("images/lemma_banner.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 720px 220px;
+	background-clip: content-box;
+	margin-top: 2em;
+}
+
+p a {
+	color: var(--outline);
+}
+
+p a:visited {
+	color: var(--outline);
+}
+
+p a:hover {
+	color: var(--accent);
+	text-shadow: 0 0 5px var(--outline);
+}
+
+p a:active {
+	color: var(--text-color);
+}
+
+a.button {
+	display: block;
+	font-size: xx-large;
+	text-decoration: none;
+	border: 8px solid var(--outline);
+	border-radius: 1.2rem;
+	background-color: var(--accent);
+	color: var(--text-color);
+	padding: 2rem 4rem;
+	margin: 1rem;
+	width: 30vw;
+}
+
+a.button:hover {
+	border: 8px solid var(--accent);
+	background-color: var(--outline);
+	color: var(--bg-color);
+}
+
+a.button:active {
+	border: 8px solid var(--text-color);
+	background-color: var(--bg-color);
+	color: var(--accent);
+}
+
+footer {
+	margin-top: 4rem;
+}
+
+a.fakelink {
+	text-decoration: none;
+}
+
+a.fakelink:hover {
+	color: var(--outline);
+	text-shadow: none;
+}
+
+a.fakelink:active {
+	color: var(--accent);
+}
+
+p#nothing {
+	font-style: italic;
+	display: none;
+}
+
+p#nothing:target {
+	display: block;
+}
